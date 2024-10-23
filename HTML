@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Recommendation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Recommendation App</h1>
+        <label for="stock1">Stock 1:</label>
+        <input type="text" id="stock1" placeholder="Enter ticker symbol (e.g., AAPL)">
+
+        <label for="stock2">Stock 2:</label>
+        <input type="text" id="stock2" placeholder="Enter ticker symbol (e.g., MSFT)">
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" value="2020-01-01">
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" value="2023-01-01">
+
+        <label for="indicators">Select Indicators:</label>
+        <select id="indicators" multiple>
+            <option value="100 Day SMA">100 Day SMA</option>
+            <option value="50 Day SMA">50 Day SMA</option>
+            <option value="30 Day SMA">30 Day SMA</option>
+            <option value="MACD">MACD</option>
+            <option value="RSI">RSI</option>
+            <option value="Bollinger Bands">Bollinger Bands</option>
+            <option value="Fibonacci Retracement">Fibonacci Retracement</option>
+            <option value="Volume">Volume</option>
+        </select>
+
+        <button id="submitBtn">Get Recommendations</button>
+
+        <div id="stock-chart"></div>
+        <div id="chatgpt-response"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
